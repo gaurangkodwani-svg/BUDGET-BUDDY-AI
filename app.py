@@ -409,19 +409,7 @@ def render_auth_selection():
             st.session_state.auth_page = "login"
             st.rerun()
 
-    if metadata["users"]:
-        st.divider()
-        st.markdown('<div class="glass"><div class="label">Registered Users</div></div>', unsafe_allow_html=True)
-        for user_id in list(metadata["users"].keys()):
-            col1, col2, col3 = st.columns([3, 2, 1])
-            with col1:
-                st.markdown(f"**{user_id}**")
-            with col2:
-                st.caption(f"{len(metadata['users'][user_id].get('face_files', []))} face samples")
-            with col3:
-                if st.button("🗑️ Delete", key=f"del_{user_id}", help=f"Delete {user_id}"):
-                    delete_user(user_id)
-                    st.rerun()
+
 
 
 def default_budgets(category_breakdown: dict) -> dict[str, float]:
