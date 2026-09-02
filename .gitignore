@@ -1,6 +1,71 @@
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*$py.class
+
+# C extensions
+*.so
+
+# Distribution / packaging
+.Python
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+share/python-wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+
+# Virtual Environments
+.venv/
+venv/
+env/
+ENV/
+env.bak/
+venv.bak/
+myenv/
+
+# Environment Variables & Secrets
 .env
-myenv
-lr.py
-sel.py
+.env.*
+!.env.example
+.streamlit/secrets.toml
+
+# IDE & Editor files
+.vscode/
+.idea/
+.claude/
+*.swp
+*.swo
+*~
+
+# Operating System files
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Application Generated Outputs & Model Artifacts
 outputs/
 category_classifier_pipeline.pkl
+lr.py
+sel.py
+
+# Personal biometric data in face database (preserve OpenCV cascade & gitkeep)
+face_database/*.jpg
+face_database/*.jpeg
+face_database/*.png
+face_database/recognizer.yml
+face_database/label_map.pkl
+face_database/metadata.json
+face_database/recognizer.pkl
+!face_database/haarcascade_frontalface_default.xml
+!face_database/.gitkeep
