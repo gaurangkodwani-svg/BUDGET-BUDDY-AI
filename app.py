@@ -49,7 +49,7 @@ CHART_DIR.mkdir(parents=True, exist_ok=True)
 FACE_METADATA_FILE = FACE_DB_DIR / "metadata.json"
 FACE_RECOGNIZER_MODEL_FILE = FACE_DB_DIR / "recognizer.yml"
 FACE_LABEL_MAP_FILE = FACE_DB_DIR / "label_map.pkl"
-CASCADE_PATH = FACE_DB_DIR / "haarcascade_frontalface_default.xml"
+CASCADE_PATH = FACE_DB_DIR / "haarcascade_frontalface_alt.xml"
 
 # Initialize face cascade
 FACE_CASCADE = None
