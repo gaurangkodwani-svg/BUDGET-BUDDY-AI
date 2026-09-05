@@ -168,8 +168,12 @@ def register_face(username: str, face_roi: np.ndarray) -> bool:
         return False
 
 
-def recognize_face(face_roi: np.ndarray, confidence_threshold: float = 70.0) -> Optional[str]:
-    """Recognize a face and return username if confident."""
+def recognize_face(face_roi: np.ndarray, confidence_threshold: float = 40.0) -> Optional[str]:
+    """Recognize a face and return username if confident.
+    
+    Note: Lower confidence values indicate better matches in LBPH.
+    Default threshold lowered to 40.0 for stricter matching to reduce false positives.
+    """
     recognizer_data = load_recognizer()
     if recognizer_data is None:
         return None
